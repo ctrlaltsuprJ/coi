@@ -17,29 +17,13 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    .hero-bg {
-      /* Updated to Purple/Pink Gradient */
-      background-image: linear-gradient(rgba(88, 28, 135, 0.85), rgba(219, 39, 119, 0.75)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .service-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-</head>
+  <!--bts-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+<!--css propio-->
+<link rel="stylesheet" href="style.css">
+ </head>
 
 <body class="bg-gray-50 text-gray-800">
 
@@ -60,9 +44,10 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="#inicio" class="text-gray-600 hover:text-pink-600 font-medium transition">Inicio</a>
-          <a href="#dra" class="text-gray-600 hover:text-pink-600 font-medium transition">Doctores</a>
+          <a href="#doctores" class="text-gray-600 hover:text-pink-600 font-medium transition">Doctores</a>
           <a href="#servicios" class="text-gray-600 hover:text-pink-600 font-medium transition">Servicios</a>
           <a href="#padecimientos" class="text-gray-600 hover:text-pink-600 font-medium transition">Padecimientos</a>
+          <a href="#horarios" class="text-gray-600 hover:text-pink-600 font-medium transition">Horarios</a>
           <a href="#contacto"
             class="bg-pink-600 text-white px-5 py-2 rounded-full font-medium hover:bg-pink-700 transition shadow-lg">
             Agendar Cita
@@ -83,12 +68,14 @@
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <a href="#inicio"
           class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-md">Inicio</a>
-        <a href="#dra"
+        <a href="#doctores"
           class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-md">Doctores</a>
         <a href="#servicios"
           class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-md">Servicios</a>
         <a href="#padecimientos"
           class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-md">Padecimientos</a>
+          <a href="#horarios"
+          class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-pink-600 hover:bg-pink-50 rounded-md">Horarios</a>
         <a href="#contacto"
           class="block px-3 py-2 text-base font-medium text-pink-600 font-bold bg-pink-50 rounded-md">Contacto</a>
       </div>
@@ -113,52 +100,124 @@
           class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 text-lg font-semibold py-3 px-8 rounded-full transition">
           Ver Tratamientos
         </a>
+        <a href="#horarios"
+          class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 text-lg font-semibold py-3 px-8 rounded-full transition">
+          Ver Horarios
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Doctor Profile Section -->
-  <section id="dra" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="w-full md:w-1/2 relative">
-          <!-- Placeholder for Doctor Image -->
-          <div
-            class="bg-gray-200 rounded-lg overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center relative">
-            <img
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Doctora Dentista" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition">
-            <div class="absolute bottom-0 left-0 bg-purple-600 text-white px-6 py-2 rounded-tr-lg">
-              <span class="font-bold">Especialista</span>
-            </div>
+   <section id="doctores">
+ <!-- Doctor Profile Section: Dra. Mónica Alejandra Zamora Chávez -->
+<section id="dra-zamora" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2 relative">
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center relative">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+               alt="Doctora Dentista" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition">
+          <div class="absolute bottom-0 left-0 bg-purple-600 text-white px-6 py-2 rounded-tr-lg">
+            <span class="font-bold">Especialista Odontopediatra</span>
           </div>
-        </div>
-        <div class="w-full md:w-1/2">
-          <h2 class="text-3xl font-bold text-gray-800 mb-2">Dra. Mónica Alejandra Zamora Chávez</h2>
-          <p class="text-pink-600 text-xl font-medium mb-4">Cirujano Dentista - Odontóloga Pediatra</p>
-          <div class="inline-block bg-gray-100 px-4 py-2 rounded-md mb-6 border-l-4 border-purple-600">
-            <p class="text-gray-700 font-semibold">Cédula Profesional: <span class="text-gray-900">8552472</span></p>
-          </div>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Comprometida con la salud bucal de sus pacientes en Xalapa, la Dra. Zamora ofrece un trato humano y
-            profesional, utilizando técnicas modernas para garantizar diagnósticos precisos y tratamientos efectivos. Su
-            objetivo es devolver la funcionalidad y estética a su sonrisa en un ambiente seguro y cómodo.
-          </p>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-center text-gray-700">
-              <i class="fa-solid fa-check-circle text-pink-500 mr-3"></i> Atención personalizada
-            </li>
-            <li class="flex items-center text-gray-700">
-              <i class="fa-solid fa-check-circle text-pink-500 mr-3"></i> Tecnología moderna
-            </li>
-            <li class="flex items-center text-gray-700">
-              <i class="fa-solid fa-check-circle text-pink-500 mr-3"></i> Ambiente higiénico y seguro
-            </li>
-          </ul>
         </div>
       </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Dra. Mónica Alejandra Zamora Chávez</h2>
+        <p class="text-pink-600 text-xl font-medium mb-4">Cirujano Dentista - Odontóloga Pediatra</p>
+        <div class="inline-block bg-gray-100 px-4 py-2 rounded-md mb-6 border-l-4 border-purple-600">
+          <p class="text-gray-700 font-semibold">Cédula Profesional: <span class="text-gray-900">8552472</span></p>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Comprometida con la salud bucal de sus pacientes en Xalapa, la Dra. Zamora ofrece un trato humano y profesional, utilizando técnicas modernas para garantizar diagnósticos precisos y tratamientos efectivos.
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Doctor Profile Section: Dr. Carlos Hernández -->
+<section id="dr-hernandez" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2 relative">
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center relative">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+               alt="Doctor Maxilofacial" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition">
+          <div class="absolute bottom-0 left-0 bg-blue-600 text-white px-6 py-2 rounded-tr-lg">
+            <span class="font-bold">Especialista Maxilofacial</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Dr. Carlos Hernández</h2>
+        <p class="text-blue-600 text-xl font-medium mb-4">Cirujano Maxilofacial</p>
+        <div class="inline-block bg-gray-100 px-4 py-2 rounded-md mb-6 border-l-4 border-blue-600">
+          <p class="text-gray-700 font-semibold">Cédula Profesional: <span class="text-gray-900">7845123</span></p>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Experto en cirugía maxilofacial, el Dr. Hernández atiende casos complejos de fracturas, malformaciones y tratamientos quirúrgicos avanzados para mejorar la funcionalidad y estética facial.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Doctor Profile Section: Dra. Laura Martínez -->
+<section id="dra-martinez" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2 relative">
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center relative">
+          <img src="https://images.unsplash.com/photo-1629909613654-7c1d6c5d6c5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+               alt="Doctora Ortodoncista" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition">
+          <div class="absolute bottom-0 left-0 bg-green-600 text-white px-6 py-2 rounded-tr-lg">
+            <span class="font-bold">Especialista Ortodoncia</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Dra. Laura Martínez</h2>
+        <p class="text-green-600 text-xl font-medium mb-4">Ortodoncista</p>
+        <div class="inline-block bg-gray-100 px-4 py-2 rounded-md mb-6 border-l-4 border-green-600">
+          <p class="text-gray-700 font-semibold">Cédula Profesional: <span class="text-gray-900">9123456</span></p>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          La Dra. Martínez se especializa en ortodoncia convencional y estética, ayudando a pacientes de todas las edades a lograr sonrisas alineadas y saludables mediante tratamientos personalizados.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Doctor Profile Section: Dr. José Ramírez -->
+<section id="dr-ramirez" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2 relative">
+        <div class="bg-gray-200 rounded-lg overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center relative">
+          <img src="https://images.unsplash.com/photo-1606813909026-d5c9a9d5f9f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+               alt="Doctor Odontopediatra" class="object-cover w-full h-full opacity-90 hover:opacity-100 transition">
+          <div class="absolute bottom-0 left-0 bg-pink-600 text-white px-6 py-2 rounded-tr-lg">
+            <span class="font-bold">Especialista Odontopediatra</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold text-gray-800 mb-2">Dr. José Ramírez</h2>
+        <p class="text-pink-600 text-xl font-medium mb-4">Odontopediatra</p>
+        <div class="inline-block bg-gray-100 px-4 py-2 rounded-md mb-6 border-l-4 border-pink-600">
+          <p class="text-gray-700 font-semibold">Cédula Profesional: <span class="text-gray-900">8456123</span></p>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          El Dr. Ramírez brinda atención especializada a niños, enfocándose en la prevención y tratamiento de problemas dentales en edades tempranas, con un enfoque cálido y amigable.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
 
   <!-- Services Section -->
   <section id="servicios" class="py-20 bg-gray-50">
@@ -318,6 +377,96 @@
       </div>
     </div>
   </section>
+  <!--contcto y horarios-->
+  <!-- Horario Section -->
+<section id="horarios" class="container my-5">
+  <h2 class="text-primary">Horario de Atención</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>Día</th>
+          <th>Horario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Lunes</td><td>10:00 am - 7:00 pm</td></tr>
+        <tr><td>Martes</td><td>10:00 am - 7:00 pm</td></tr>
+        <tr><td>Miércoles</td><td>10:00 am - 7:00 pm</td></tr>
+        <tr><td>Jueves</td><td>10:00 am - 7:00 pm</td></tr>
+        <tr><td>Viernes</td><td>10:00 am - 7:00 pm</td></tr>
+        <tr class="table-secondary"><td>Sábado</td><td>Inactivo</td></tr>
+        <tr class="table-secondary"><td>Domingo</td><td>Inactivo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-muted mt-3">Nuestro equipo está disponible de lunes a viernes para atenderte con la mejor calidad y profesionalismo.</p>
+
+  <!-- Botón para abrir modal -->
+<div class="text-center mt-4">
+  <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#citaModal">
+    📅 Agendar Cita
+  </button>
+</div>
+
+<!-- Modal de Contacto -->
+<div class="modal fade" id="citaModal" tabindex="-1" aria-labelledby="citaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="citaModalLabel">Agendar Cita</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form id="citaForm" class="row g-3">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="col-md-6">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" required>
+          </div>
+          <div class="col-md-6">
+            <label for="fecha" class="form-label">Fecha preferida</label>
+            <input type="date" class="form-control" id="fecha" name="fecha" required>
+          </div>
+          <div class="col-12">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("TU_PUBLIC_KEY"); // 🔑 Reemplaza con tu Public Key
+  })();
+
+  document.getElementById("citaForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
+      .then(function() {
+        alert("✅ Tu cita ha sido enviada correctamente. Nos pondremos en contacto pronto.");
+        document.getElementById("citaForm").reset();
+      }, function(error) {
+        alert("❌ Hubo un error al enviar tu cita: " + JSON.stringify(error));
+      });
+  });
+</script>
 
   <!-- Location & Contact -->
   <section id="contacto" class="py-20 bg-white">
@@ -411,6 +560,7 @@
       });
     });
   </script>
+  
 </body>
 
 </html>
